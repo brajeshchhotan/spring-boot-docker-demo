@@ -31,7 +31,7 @@ public class SpringBootDockerDemoApplication {
     @GetMapping("/")
     public Map<String, Object> home() {
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "🐳 Hello Docker World!");
+        response.put("message", "🐳 Hello Docker World!Welcome learners!!");
         response.put("service", "Spring Boot Microservice Demo");
         response.put("version", "1.0.0");
         response.put("timestamp", getCurrentTimestamp());
@@ -49,7 +49,7 @@ public class SpringBootDockerDemoApplication {
     @GetMapping("/api/greeting/{name}")
     public Map<String, Object> greeting(@PathVariable String name) {
         Map<String, Object> response = new HashMap<>();
-        response.put("greeting", "Hello, " + name + "!");
+        response.put("greeting", "Hello, Learner " + name + "!");
         response.put("service", "greeting-service");
         response.put("timestamp", getCurrentTimestamp());
         response.put("containerized", "true");
@@ -59,7 +59,7 @@ public class SpringBootDockerDemoApplication {
      * Echo endpoint for testing
      */
     @GetMapping("/api/echo")
-    public Map<String, Object> echo(@RequestParam(defaultValue = "Hello World") String message) {
+    public Map<String, Object> echo(@RequestParam(defaultValue = "Hello Microservices World...echo learners!") String message) {
         Map<String, Object> response = new HashMap<>();
         response.put("echo", message);
         response.put("length", message.length());
